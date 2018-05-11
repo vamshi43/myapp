@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <ol>
+      <li>Home</li>
+      <li>Services</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ol>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" color="primary" mat-raised-button (click)="drawer.toggle()">sidenav
+     <i class="fa fa-angle-double-right"></i>
+    </button>
+  </div>
+
+</mat-drawer-container>
+
