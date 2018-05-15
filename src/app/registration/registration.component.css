@@ -1,0 +1,39 @@
+
+.mat-card-cs{
+    width: 60% !important;
+    margin-left: 20%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    box-shadow: 0 3px 1px -2px rgb(0, 0, 0), 0 2px 2px 0 rgb(0, 0, 0),0 3px 1px -2px rgb(122, 56, 8), 0 1px 5px 0 rgb(0, 0, 0)!important;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+   /* margin-left: 25%; */
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .example-form {
+    max-width:800px ;
+    width: 100%;
+    margin-left: 2%;
+   
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .all-mdd{
+      margin: 3% 45%;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+   margin: 2%;
+  }
+  mat-label{
+    margin:30px 30px 30px 5px;
+  }

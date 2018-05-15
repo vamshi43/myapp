@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-
-
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" >
 
   <mat-toolbar-row>
-    <span>Third Line</span>
+
+      <button mat-icon-button>
+          <mat-icon (click)="drawer.toggle()" aria-label="Example icon-button with a heart icon">dehaze</mat-icon>
+      </button>
+     
+    <span>Passion World</span>
     <span class="example-spacer"></span>
     <i class="material-icons user-sign" (click)="openDialog()">  perm_identity</i> 
 
@@ -14,14 +17,24 @@
 </mat-toolbar>
 
 
-<!-- <div style="text-align: center;margin: 20%">
-  <h1>Angular tutorial</h1>
-  <p>In this tutorial, we are going to build an Angular 5 authentication system using Google’s Cloud Firestore. Most of the applications we build require some kind of authentication, and the simplest and fastest way to get started with that is by using the Firestore – a flexible, scalable database for mobile, web and server development. You will learn to develop a fully functioning Angular 5 authentication system using Firestore.</p>
-</div> -->
+<!-- sidenav -->
 
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <ol>
+      <li>Home</li>
+      <li>Services</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ol>
+  </mat-drawer>
 
+  <div class="example-sidenav-content">
+      <router-outlet></router-outlet>
+  </div>
 
-<router-outlet></router-outlet>
+</mat-drawer-container>
+<!--side nav ends here-->
 
 
 

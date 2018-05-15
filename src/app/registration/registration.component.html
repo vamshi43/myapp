@@ -1,0 +1,79 @@
+
+<h2 style="margin-left: 43%;font-family: 'Courier New', Courier, monospace">Signup Here</h2>
+
+
+<div class="example-container">
+<mat-card class="mat-card-cs">
+<form class="example-form" >
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="First Name" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Last Name" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Email" [formControl]="emailFormControl"
+             [errorStateMatcher]="matcher">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Contact No." type="tel" required>
+    </mat-form-field>
+
+    <mat-radio-group>
+      <mat-label>Gender : </mat-label>
+      <mat-radio-button value="1">Male</mat-radio-button>
+      <mat-radio-button value="2">Female</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field class="example-full-width">
+          <mat-select placeholder="Category" required>
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-select placeholder="Nationality" required>
+          <mat-option *ngFor="let nationality of nationalitys" [value]="nationality.value">
+            {{ nationality.viewValue }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Any Govt. ID Proof" type="text" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" >
+        <textarea matInput placeholder="Enter Address"  rows="7" cols="50"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-select placeholder="State" required>
+          <mat-option *ngFor="let state of states" [value]="state.value">
+            {{ state.viewValue }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" type="password" required>
+    </mat-form-field>
+  
+
+    <button mat-raised-button color="primary" class="all-mdd">SUBMIT</button>
+   
+</form>
+</mat-card>
+</div>

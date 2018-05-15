@@ -1,5 +1,8 @@
 
 
+  .navb-fix{
+    position: fixed;
+  }
   .example-icon {
     padding: 0 14px;
   }
@@ -14,7 +17,10 @@
      cursor: pointer;
      
   }
-
+.mat-drawer-container{
+background:transparent;
+}
+  
   .example-form {
     min-width: 150px;
     max-width: 500px;
@@ -28,3 +34,26 @@
   .all-mdd{
     left: 35%;
   }
+
+  .example-container {
+    width: auto;
+    height: auto;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  }
+  
+  .example-sidenav-content {
+    /* display: flex; */
+    height: 100%;
+    margin-top: 3%;
+    align-items: left;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 30px;
+    background-color:#9494944a;
+    width: 300px;
+   
+    margin-top:65px ;
+  }
+    

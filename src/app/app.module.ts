@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent,DialogComponent } from './app.component';
+import { AppComponent,DialogComponent, } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -14,16 +14,21 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-
+import { RegistrationComponent } from './registration/registration.component';
+import {MatCardModule} from '@angular/material/card';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 const appRoutes: Routes = [
   
   
   
   { path: '',
-  redirectTo: '/',
+  redirectTo: '/home',
   pathMatch: 'full'
   },
+  
   { path: 'home',
     component: HomeComponent
     
@@ -36,6 +41,10 @@ const appRoutes: Routes = [
 { path: 'about',
 component: AboutComponent
 },
+
+{ path: 'registration',
+component: RegistrationComponent
+},
   
 ];
 
@@ -47,6 +56,7 @@ component: AboutComponent
     ContactComponent,
     DialogComponent,
     AboutComponent,
+    RegistrationComponent,
     
    
   ],
@@ -60,19 +70,22 @@ component: AboutComponent
     MatDialogModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatRadioModule,
     MatSidenavModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
-
+    ),
+    MatCardModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule
  ],
 
-
-
-
+ 
 entryComponents: [
-  DialogComponent
+  DialogComponent,
+  // RegistrationComponent
 ],
 
   providers: [],
